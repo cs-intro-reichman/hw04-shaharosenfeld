@@ -1,10 +1,7 @@
 public class ArrayOps {
     public static void main(String[] args) {
-        System.out.println(isSorted(new int[] {7, 5, 4, 3, -12})); // true
-System.out.println(isSorted(new int[] {1, 2, 3})); // true
-System.out.println(isSorted(new int[] {1, -2, 3})); // false
-System.out.println(isSorted(new int[] {1, 1, 500})); // true
-System.out.println(isSorted(new int[] {1, 3, 2}));
+        System.out.println(findMissingInt(new int[] {2,3,1})); // true
+
     }
     
     public static int findMissingInt (int [] array) {
@@ -15,7 +12,7 @@ System.out.println(isSorted(new int[] {1, 3, 2}));
         }
         else
         {
-            for (int i = 0; indexToAdd < array.length; i++)//2
+            for (int i = 0; indexToAdd < array.length; i++)//0<3; i=2
             {
                 if (indexToAdd == array[i]) {
                     indexToAdd++;
@@ -23,9 +20,9 @@ System.out.println(isSorted(new int[] {1, 3, 2}));
                 }
                 if (i == array.length - 1)
                 {
-                    notExist = indexToAdd;
-                    indexToAdd++;
-                    i=0;
+                    return indexToAdd;
+                    //indexToAdd++;
+                    //i=0;
                 }
             }   
         }
