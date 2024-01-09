@@ -4,6 +4,7 @@ public class ArrayOps {
 
     }
     
+    
     public static int findMissingInt (int [] array) {
         int indexToAdd = 0;
         int notExist = 0;
