@@ -22,6 +22,10 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
+        int[] test = allIndexOf("Hello worLd",'l');
+        for (int i = 0; i < test.length; i++) {
+            System.out.print(test[i]);
+        }
     }
 
     public static String capVowelsLowRest (String string) {
@@ -90,7 +94,22 @@ public class StringOps {
     }
 
     public static int[] allIndexOf (String string, char chr) {
-        // Write your code here:
-        return new int[1];
+        int indexCounter = 0;
+        int j = 0;
+        for (int i = 0; i < string.length(); i++) {
+            if (string.charAt(i)==chr) {
+                indexCounter++;
+            }
+        }
+        int[] indexOf = new int[indexCounter];
+        for (int i = 0; i < string.length(); i++) {
+            if (string.charAt(i)==chr) {
+                indexOf[j] = i;
+                j++;
+            }
+        }
+
+
+        return indexOf;
     }
 }
